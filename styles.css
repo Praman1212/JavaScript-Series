@@ -1,0 +1,334 @@
+:root{
+    --p1-color:#d1453b;
+    --p2-color: #eb8909;
+    --p3-color: #246fe0;
+    --p4-color: #666;
+
+}
+*{
+    padding: 0;
+    margin: 0;
+}
+.body{
+    display: flex;
+    justify-content: space-between;
+    position:relative;
+    margin: 16px auto;
+    
+}
+nav{
+    width: 20%;
+    background: linear-gradient(to bottom, rgb(255, 255, 255),rgb(238, 240, 236));
+    margin:0px 5px;
+    padding: 18px;
+    height: 91vh;
+    position: relative;
+    
+}
+.profile{
+    display: flex;
+    align-items: center;
+    margin-top:0.5vh;
+}
+.profile-link{
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+    font-size: 18px;
+}
+.profile-image{
+    border-radius: 50%;
+    background-color:rgb(240, 232, 232) ;
+    height:45px ;
+    width: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.profile-image img{
+    border-radius: 50%;
+    margin-top: 4px;
+    height:31px;
+    width: auto;
+    background-color: white;
+}
+.float-right{
+    display: flex;
+    align-items: center;
+}
+section{
+    width: 80%;
+    /* background-color: green; */
+}
+a{
+    text-decoration: none;
+}
+.btn-add-task{
+    margin:3vh auto;
+}
+.btn-add-task input{
+    background-color: rgb(238, 4, 82);
+    color:white ;
+    border: none;
+    font-size: 15px;
+    text-align: center;
+    padding: 8px;
+    border-radius: 3px;
+    width: 100%;
+}
+.nav-item{
+    margin-top:12px;
+    font-size: 18px;
+}
+.nav-item i{
+    
+}
+.nav-item text{
+    padding-left:15px;
+    color:black ;
+}
+.projects{
+    margin-top: 35px;
+    background-color: rgb(255, 170, 170);
+    padding: 8px;
+    border-radius: 3px;
+    width: 95%;
+}
+.projects a{
+    text-decoration: none;
+    color: black;
+}
+.projects-btn{
+    display: flex;
+    align-items: center;
+}
+.btn{
+    margin-left: auto
+}
+.fa-plus, .fa-chevron-left{
+    margin-left:3px ;
+}
+
+/* Add task section */
+.add-task{
+    /* background-color: blueviolet; */
+    margin: 2px 1vh;
+    position: relative;
+}
+.add-task-section{
+    padding: 7vh 7vh 2vh 7vh;
+    margin:0 4vh ;
+    /* background-color: pink; */
+}
+.add-task-header{
+    display: flex;
+}
+.add-task-header{
+    /* background-color: yellow; */
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+.btn-add-task button{
+    background-color: var(--p1-color);
+    border: none;
+    padding: 10px;
+    border-radius: 6px;
+    font-size: 15px;
+    width: 100%;
+    color: white;
+    
+}
+.sub-header{
+    margin: 8px 0;
+}
+.setting{
+    color: gray;
+    font-size: 18px;
+}
+.setting text{
+    margin-left: 6px;
+}
+.search-project input{
+    padding: 8px;
+    border-radius: 5px;
+    width: 100%;
+    border: solid gray 1px;
+}
+.sub-header{
+    margin-bottom: 25px;
+}
+.add-active-project-section{
+    /* background-color: yellow; */
+    display: flex;
+    justify-content: space-between;
+    margin:0vh 9vh;
+}
+.active-project button{
+    border: none;
+    padding: 6px;
+    border-radius: 6px;
+    background-color: wheat;
+    float: left;
+    margin-left: 16px;
+}
+.add-project button{
+    border: none;
+    padding: 6px;
+    border-radius: 6px;
+    background-color: gray;
+    float: right;
+    color: white;
+}
+.modal{
+    display: none;
+    position:fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    /* background-color: yellow; */
+}
+.modal-content{
+    margin: 5% 25%;
+    padding: 20px;
+    /* border: 1px solid #888; */
+    width: 50%;
+    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.2);
+    background-color: #fdfdfd;
+}
+.popup-heading{
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+.popup-form .name{
+    border: none;
+    padding: 10px;
+    background-color: #f3eeee;
+    color: black;
+    margin-bottom: 5px;
+    border-radius: 6px;
+    width: 95%;
+}
+.popup-description{
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+.btn-modal{
+    padding: 5px;
+    margin-left: auto;
+    margin-bottom: 8px;
+}
+.btn-modal input{
+    padding: 8px;
+    border-radius: 8px;
+}
+.btn-modal select{
+    padding: 8px;
+    border-radius: 8px;
+}
+.due-date{
+    border: gray;
+    background-color: #f3eeee;
+}
+.priority{
+    border: none;
+    background-color: #f3eeee;
+}
+.btn-popup{
+    margin: 12px auto;
+}
+.btn-popup button{
+    border: none;
+    padding: 8px;
+    border-radius: 8px;
+}
+.popup-cancel{
+    background-color: red;
+    color: white;
+    padding: 8px;
+}
+.popup-add-task{
+    background-color: green;
+    color: white;
+    padding: 8px;
+}
+.pop-up-search{
+    display: none;
+    position:fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
+.search-content{
+    margin: 5% 25%;
+    padding: 20px;
+    /* border: 1px solid #888; */
+    width: 50%;
+    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.2);
+    background-color: #fdfdfd;
+    height: 50vh;
+    align-items: center;
+    text-align: center;
+}
+.search-close{
+    float: right;
+    border: none;
+    font-size: 25px;
+    background-color: white;
+    color: var(--p4-color);
+}
+.search-content input{
+    border: none;
+    /* background-color: var(--p4-color); */
+    padding: 10px;
+    width: 95%;
+    border-radius: 8px;
+}
+.search-popup-description{
+    margin-top: 6px;
+    float: left;
+    margin-left: 13px;
+}
+/* Today in Nav bar  */
+.popup-today{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background-color: yellow; */
+}
+.today-content{
+    margin: 5% 25%;
+    padding: 20px;
+    /* border: 1px solid #888; */
+    width: 50%;
+    box-shadow: 10px 10px 10px 10px rgba(0, 0, 0, 0.2);
+    background-color: #fdfdfd;
+}
+/* edit and delete btn */
+.edit-btn{
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 5px;
+    border-radius: 3px;
+    font-size: 15px;
+    /* margin-left: 5%;a */
+    float: right;
+    position: relative;
+    
+}
+.delete-btn{
+    margin-right: 1%;
+    border: none;
+    background-color: red;
+    color: white;
+    padding: 5px;
+    border-radius: 3px;
+    font-size: 15px;
+    float: right;
+    position: relative;
+}
