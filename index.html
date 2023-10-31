@@ -13,53 +13,78 @@
         <div class="calculator-border white">
             <div class="calculator-content ">
                 <div class="calculator-screen">
-                    <input type="number">
+                    <input type="text" id="inputField" readonly>
                 </div>
                 <div class="calculator-btn">
                     <div class="first-line-btn-white">
-                        <button>AC</button>
-                        <button>+/-</button>
-                        <button>%</button>
-                        <button id="÷" style="background-color: rgb(255, 69, 0);">÷</button>
+                        <button onclick="clearScreen()">AC</button>
+                        <button onclick="inputDisplay('+/-')">+/-</button>
+                        <button onclick=" inputDisplay('%')">%</button>
+                        <button onclick="inputDisplay('/')" style="background-color: rgb(255, 69, 0);">÷</button>
                     </div>
                     <div class="second-line-btn-white">
-                        <button>7</button>
-                        <button>8</button>
-                        <button>9</button>
-                        <button id="X" style="background-color: rgb(255, 69, 0);">X</button>
+                        <button onclick="inputDisplay('7')">7</button>
+                        <button onclick=" inputDisplay('8')">8</button>
+                        <button onclick=" inputDisplay('9')">9</button>
+                        <button onclick=" inputDisplay('*')" style="background-color: rgb(255, 69, 0);">×</button>
+
                     </div>
                     <div class="third-line-btn-white">
-                        <button>4</button>
-                        <button>5</button>
-                        <button>6</button>
-                        <button id="-" style="background-color: rgb(255, 69, 0);">-</button>
+                        <button onclick="inputDisplay('4')">4</button>
+                        <button onclick=" inputDisplay('5')">5</button>
+                        <button onclick=" inputDisplay('6')">6</button>
+                        <button onclick=" inputDisplay('-')" style="background-color: rgb(255, 69, 0);">-</button>
                     </div>
                     <div class="fourth-line-btn-white">
-                        <button>1</button>
-                        <button>2</button>
-                        <button>3</button>
-                        <button id="+" style="background-color: rgb(255, 69, 0);">+</button>
+                        <button onclick="inputDisplay('1')" class=" one">1</button>
+                        <button onclick="inputDisplay('2')">2</button>
+                        <button onclick=" inputDisplay('3')">3</button>
+                        <button onclick=" inputDisplay('+')" id="addition"
+                            style="background-color: rgb(255, 69, 0);">+</button>
                     </div>
                     <div class="fifth-line-btn-white">
-                        <button class="zero" style="width: 47%;">0</button>
-                        <button>,</button>
-                        <button id="=" style="background-color: rgb(255, 69, 0);">=</button>
+                        <button onclick="inputDisplay('0')" class=" zero" style="width: 47%;">0</button>
+                        <button onclick="inputDisplay(',')">,</button>
+                        <button onclick="calculate()" style="background-color: rgb(255, 69, 0);">=</button>
                     </div>
-
                 </div>
             </div>
         </div>
-        <!-- <div class="calculator-border black">
-            <div class="calculator-content">
-                <div class="calculator-screen">
-                    <input type="number">
-                </div>
-                <div class="calculator-btn">
-
-                </div>
-            </div>
-        </div> -->
     </div>
+    <script>
+
+        function inputDisplay(value) {
+            const inputField = document.getElementById('inputField');
+            inputField.value += value;
+            console.log(typeof (value));
+        }
+
+        function calculate() {
+            const inputField = document.getElementById('inputField');
+
+            try {
+                inputField.value = eval(inputField.value);
+            }
+            catch (error) {
+                inputField.value = 'error';
+            }
+        }
+
+        function clearScreen() {
+            inputField.value = "";
+        }
+
+
+    </script>
+</body>
+
+</html>
+
+
+
+
+
+
 </body>
 
 </html>
